@@ -1,0 +1,304 @@
+/* Common styles for all pages */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+
+:root {
+  --first-color: #e3f8ff;
+  --second-color: #dcfafb;
+  --third-color: #4c96f2;
+  --accent-color: #ff5151;
+  --dark-color: #161616;
+}
+
+:root {
+  --body-font: "Open Sans";
+  --h1-font-size: 1.5rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --h1-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 2rem 0 0 0;
+  background-color: #ebedf4; /* Changed background color */
+  color: var(--dark-color);
+  font-family: var(--body-font);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  padding: 2rem 0;
+}
+
+.bd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 1200px;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  margin: auto;
+}
+
+.title-shop {
+  position: relative;
+  margin: 0 2.5rem;
+}
+
+.title-shop::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 72px;
+  height: 2px;
+  background-color: var(--dark-color);
+  margin-left: 0.25rem;
+}
+
+/* Specific styles for homepage */
+.banner {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #619fe6 !important; /* Changed banner background color */
+}
+
+.banner .card__img {
+  width: 380px;
+}
+
+.banner .card__precis {
+  width: 20%;
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  transition: 0.5s;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.banner .card_precis .card_preci {
+  font-size: 1.5rem !important;
+}
+
+.banner .card__precis button {
+  font-size: 1.5rem !important;
+  border: none;
+  background-color: #161616;
+  color: #d81b1be8;
+  padding: .9rem 3rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+.banner .card__name {
+  position: absolute;
+  left: 0%;
+  top: 0;
+  width: 3.5rem;
+  height: 100%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  background-color: var(--dark-color);
+  color: #0e0d0d;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+/* Specific styles for cards */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0rem 2rem #095ede;
+}
+
+.card__img {
+  width: 180px;
+  height: auto;
+  padding: 3rem 0;
+  transition: 0.5s;
+  mix-blend-mode: darken;
+}
+
+.card__name {
+  position: absolute;
+  left: -25%;
+  top: 0;
+  width: 3.5rem;
+  height: 100%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  background-color: var(--dark-color);
+  color: #f4efef;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem #024dc7;
+}
+
+.card:hover .card__name {
+  left: 0;
+}
+
+.card:hover .card__img {
+  transform: rotate(30deg);
+  margin-left: 3.5rem;
+}
+
+.card:hover .card__precis {
+  margin-left: 3.5rem;
+  padding: 0 1.5rem;
+}
+
+
+
+
+
+/* Navigation styles */
+nav {
+    background-color: var(--third-color);
+    padding: 1rem;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make the list items display horizontally */
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative; /* Added */
+  }
+  
+  nav ul li a ion-icon {
+    margin-right: 5px;
+  }
+  
+  /* Header styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .logo img {
+    height: 200px; 
+  }
+  
+  /* Footer styles */
+  footer {
+    text-align: center;
+    background-color: var(--third-color);
+    padding: 1rem;
+  }
+
+
+
+
+
+  .learn-now-btn {
+    border-radius: 4px;
+    background-color: #161616; 
+    border: none;
+    color: #f2ecec; 
+    text-align: center;
+    font-size: 18px; 
+    padding: 12px 24px; 
+    width: 160px; 
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .learn-now-btn span {
+    display: inline-block;
+  }
+  
+  .learn-now-btn ion-icon {
+    margin-left: 8px; 
+  }
+
+
+
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #000; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth transition for the underline */
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%; /* Make the underline expand on hover */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
